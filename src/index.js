@@ -72,7 +72,7 @@ app.get('/api/personas/:id', (req, res) => {
 });
 
 // Ruta para actualizar una persona por ID
-app.put('/api/personas/:id', (req, res) => {
+app.patch('/api/personas/:id', (req, res) => {
   Persona.findByIdAndUpdate(req.params.id, req.body, { new: true })
     .then((persona) => {
       console.log(persona);
